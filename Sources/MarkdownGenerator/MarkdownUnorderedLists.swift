@@ -12,9 +12,9 @@ public struct MarkdownUnorderedLists: MarkdownContent {
         
         let unorderedLists: String = contents
             .map {
-                "* \($0)\n"
+                "* \($0)"
             }
-            .joined()
+            .joined(separator: "\n")
         
         self.content = unorderedLists
     }
